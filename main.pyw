@@ -5,6 +5,9 @@ import threading
 
 def download():
     track_url = url.get()
+    if not track_url.strip():
+     text_box.insert(END, "❌ Please enter a valid Spotify link\n")
+    return
     text_box.insert(END, f"Downloading: Please wait...\n")
     text_box.see(END)
 
